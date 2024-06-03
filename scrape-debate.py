@@ -22,7 +22,7 @@ presidential_debate = 'https://www.debates.org/voter-education/debate-transcript
 #list of debate texts
 debate_text = []
 
-#Render Page Approach
+#Render Page Approach for Supreme Court Cases
 
 opinions_xpath = '/html/body/div/div/div[3]/main/div/div/div/div/div/div[2]'
 
@@ -45,6 +45,8 @@ for case in cases_list:
         test_case = str(case)
         new_string = test_case.replace('/cases', '', 1)
         list_of_cases.append(new_string)
+
+#Presidential Debate Scraping
 
 g = s.get(presidential_debate)
 
